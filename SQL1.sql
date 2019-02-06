@@ -21,8 +21,8 @@ SELECT TOP(1) Model.Nazwa, Marka.Nazwa, Samochod.RokProdukcji FROM Wypozyczenia
 	ORDER BY Wypozyczenia.DataWypozyczenia DESC
 --7
 SELECT * FROM(SELECT TOP(3) Klient.Imie, Klient.Nazwisko FROM Wypozyczenia 
-JOIN  Klient ON Wypozyczenia.IdKlienta=Klient.IdKlient
-ORDER BY Wypozyczenia.DataWypozyczenia ) AS K ORDER BY K.Nazwisko
+	JOIN  Klient ON Wypozyczenia.IdKlienta=Klient.IdKlient
+	ORDER BY Wypozyczenia.DataWypozyczenia ) AS K ORDER BY K.Nazwisko
 --8
 SELECT Samochod.RokProdukcji FROM Samochod 
 	JOIN Model ON Samochod.IdModel=Model.IdModel 
